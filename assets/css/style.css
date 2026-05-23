@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size-h2: 2rem;
+    --font-size-label: 0.95rem;
+    --font-size-input: 0.85rem;
+}
+
+body {
+    background: #251144;
+    min-height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.6)),
+        url('../images/bg.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    margin-bottom: calc(var(--font-size-label) - 4rem);
+}
+
+header img {
+    width: 100%;
+    filter: drop-shadow(2px 1px 6px #401);
+}
+
+form {
+    box-shadow: 1px 2px 7px #ccc9;
+    padding: 2em;
+    width: 100vw;
+    max-width: 600px;
+    background: #f2ede7;
+}
+
+form h2 {
+    text-align: center;
+    font-size: var(--font-size-h2);
+    color: #3d1b6a;
+}
+
+label {
+    font-size: var(--font-size-label);
+    font-weight: 600;
+    color: #3d1b6a;
+
+}
+
+input {
+    width: 100%;
+    font-size: var(--font-size-input);
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #d8c3a5;
+    background: #fffaf5;
+    outline: none;
+
+}
+
+input:focus {
+    border-color: #4b1f7a;
+
+    box-shadow:
+        0 0 0 4px rgba(75, 31, 122, 0.15);
+}
+
+button {
+    border: none;
+    padding: 10px 18px;
+    font-size: var(--font-size-label);
+    border-radius: 4px;
+    background: #3d1b6a;
+    color: white;
+    cursor: pointer;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    gap: 5px;
+}
+
+.submit-box {
+    text-align: center;
+}
+
+.links-box {
+    margin-top: 25px;
+    display: flex;
+    border-radius: 1px solid red;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-size-h2: 2.2rem;
+        --font-size-label: 1rem;
+        --font-size-input: 0.95rem;
+    }
+
+    form {
+        max-width: 500px;
+        max-width: 700px;
+        border-radius: 8px;
+    }
+
+    .links-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .line {
+        position: absolute;
+        left: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --font-size-h2: 2.5rem;
+        --font-size-label: 1.05rem;
+        --font-size-input: 1rem;
+    }
+
+    form {
+        width: 600px;
+        max-width: 900px;
+    }
+}
+
+@media (min-width: 1400px) {
+    :root {
+        --font-size-h2: 2.7rem;
+        --font-size-p: 1.25rem;
+        --font-size-label: 1.2rem;
+        --font-size-input: 1.1rem;
+    }
+
+    form {
+        width: 900px;
+        max-width: 1100px;
+    }
+}
+
+@media(hover: hover){
+    button:hover {
+        background: #52248f;
+    }
+}
